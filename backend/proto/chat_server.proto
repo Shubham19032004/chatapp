@@ -8,6 +8,6 @@ message send{
 message receive{
     string message=1;
 }
-service TherapistServer{
+service ChatApp{
     rpc HelloServer (stream send) returns (stream receive){}
 }
