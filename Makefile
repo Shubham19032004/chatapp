@@ -5,7 +5,7 @@ APP_ENV := ./backend/app.env
 include $(APP_ENV)
 export $(shell sed 's/=.*//' $(APP_ENV))
 postgres:
-	docker run --name  postgres --network bank-network -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres
+	docker run --name  postgres  -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=secret -d postgres
 
 createdb:
 	docker exec -it postgres createdb --username=root --owner=root chatapp

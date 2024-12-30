@@ -1,0 +1,13 @@
+syntax="proto3";
+
+package pb;
+option go_package="backend/pb";
+message send{
+    string message=1;
+}
+message receive{
+    string message=1;
+}
+service TherapistServer{
+    rpc HelloServer (stream send) returns (stream receive){}
+}
