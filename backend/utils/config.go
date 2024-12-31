@@ -7,6 +7,7 @@ type Config struct {
 	DBSource          string `mapstructure:"DB_SOURCE"`
 	GrpcServerAddress string `mapstructure:"GRPC_SERVER_ADDRESS"`
 	TokenSymmetricKey string `mapstructure:"TOKEN_SYMMETRIC_KEY"`
+	WebSocketServerAddress string `mapstructure:"WEB_SERVER_ADDRESS"`
 }
 
 func LoadConfig(path string) (config Config, err error) {
