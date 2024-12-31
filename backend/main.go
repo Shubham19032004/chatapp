@@ -11,6 +11,7 @@ import (
 	"github.com/shubham19032004/chatapp/gapi"
 	"github.com/shubham19032004/chatapp/pb"
 	"github.com/shubham19032004/chatapp/utils"
+	"github.com/shubham19032004/chatapp/ws"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -52,13 +53,11 @@ func runGrpcServer(config utils.Config, store db.Store) {
 	}
 }
 
-// 
 func startWebSocketServer(config utils.Config) error {
-	manager := utils.NewManager()
+	manager := ws.NewManager()
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/ws", manager.ServerWS)
-	
 
 	httpServer := &http.Server{
 		Addr:    config.WebSocketServerAddress,
