@@ -41,6 +41,7 @@ func (m *Manager) ServerWS(w http.ResponseWriter, r *http.Request) {
 	client := NewClient(conn, m)
 	m.addClinet(client)
 	go client.readMessages()
+	go client.writeMessages()
 	// defer conn.Close() // Ensure the connection is closed when done
 	// log.Println("Connection closed")
 }
