@@ -13,6 +13,7 @@ import (
 var (
 	// Setup request size
 	websocketUpgrader = websocket.Upgrader{
+		CheckOrigin:     checkOrigin,
 		ReadBufferSize:  1024,
 		WriteBufferSize: 1024,
 	}
@@ -85,5 +86,15 @@ func (m *Manager) removeClinet(client *Client) {
 		client.connection.Close()
 		delete(m.clients, client)
 	}
+}
 
+func checkOrigin(r *http.Request) bool {
+	origin := r.Header.Get("Origin")
+	switch origin {
+	case "http://loacalhost:8080":
+		return true
+	default:
+		return true
+
+	}
 }
