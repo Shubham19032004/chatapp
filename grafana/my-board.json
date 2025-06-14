@@ -1,5 +1,5 @@
 {
-  "apiVersion": "dashboard.grafana.app/v1beta1",
+  "apiVersion": "dashboard.grafana.app/v0alpha1",
   "kind": "Dashboard",
   "metadata": {
     "name": "2faf4a63-8b43-431b-9aff-a01784190788"
@@ -83,7 +83,7 @@
               "type": "grafana-postgresql-datasource",
               "uid": "ceopzvi7177r4c"
             },
-            "editorMode": "code",
+            "editorMode": "builder",
             "format": "table",
             "rawSql": "SELECT COUNT(name) FROM courses LIMIT 50 ",
             "refId": "A",
