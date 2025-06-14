@@ -112,6 +112,54 @@
               "limit": 50
             },
             "table": "metrics"
+          },
+          {
+            "dataset": "grafana_demo",
+            "datasource": {
+              "type": "mysql",
+              "uid": "aeoxa5f0xqi9sb"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "hide": false,
+            "rawSql": "SELECT MIN() FROM grafana_demo.metrics LIMIT 50 ",
+            "refId": "B",
+            "sql": {
+              "columns": [
+                {
+                  "name": "MIN",
+                  "parameters": [
+                    {
+                      "name": "",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "metrics"
+          },
+          {
+            "dataset": "grafana_demo",
+            "datasource": {
+              "type": "mysql",
+              "uid": "aeoxa5f0xqi9sb"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "hide": false,
+            "rawSql": "",
+            "refId": "C"
           }
         ],
         "title": "New panel",
