@@ -83,7 +83,7 @@
               "type": "grafana-postgresql-datasource",
               "uid": "ceopzvi7177r4c"
             },
-            "editorMode": "builder",
+            "editorMode": "code",
             "format": "table",
             "rawSql": "SELECT COUNT(name) FROM courses LIMIT 50 ",
             "refId": "A",
