@@ -1,8 +1,8 @@
 package gapi
 
 import (
-	// "context"
-	// "fmt"
+
+	
 	"fmt"
 	"io"
 	"log"
@@ -21,6 +21,7 @@ type Server struct {
 	config utils.Config
 }
 
+
 func NewServer(config utils.Config, store db.Store) (*Server, error) {
 	server := &Server{
 		config: config,
@@ -29,6 +30,8 @@ func NewServer(config utils.Config, store db.Store) (*Server, error) {
 	return server, nil
 
 }
+
+
 func (s *Server) HelloServer(stream pb.ChatApp_HelloServerServer) error {
 	log.Println("Bidirectional stream started")
 	for {
